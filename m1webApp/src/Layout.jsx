@@ -1,16 +1,18 @@
 import {Outlet} from "react-router-dom";
 import Navbar from "./components/Header/index.jsx";
-//import Footer from "./components/Footer";
-//import Header from "./components/Header";
+import Footer from "./components/Footer/index.jsx";
 
 export default function Layout() {
     return (
         <>
-            <Navbar/>
-            <main className="p-4 min-h-screen bg-gray-100">
-                <Outlet/>
-                {/* <Footer /> */}
-            </main>
+            <div className="flex flex-col min-h-screen">
+                <Navbar/>
+                <main className="flex-1 p-4 bg-gray-100">
+                    <Outlet/>
+                </main>
+                { <Footer /> }
+            </div>
+
         </>
     );
 }

@@ -3,6 +3,9 @@
   "footer-title": "Footer",
   "logger" : "Logger",
   "register": "Register",
+  "top_10_games": "Best of 10 games",
+  "login" : "Login",
+  "no_account_yet": "No account yet",
   "menu": {
     "login": "Login",
     "home": "Home",

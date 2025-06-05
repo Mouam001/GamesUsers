@@ -3,6 +3,8 @@
   "footer-title": "Pied de page",
   "logger" : "Se connecter",
   "register": " S'enregistrer",
+  "top_10_games": " Les 10 Meilleurs jeux",
+  "no_account_yet": "Pas encore de compte",
   "menu": {
     "login": "Connexion",
     "home": "Accueil",
