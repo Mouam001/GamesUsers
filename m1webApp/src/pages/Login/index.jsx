@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import React, {useState } from "react";
 import View from "./view.jsx";
-import { registerUser } from "../../services/api.jsx";
-import {useNavigate} from "react-router-dom";
+import {loginUser, registerUser} from "../../services/api.jsx";
+import { useNavigate } from "react-router-dom";
 
-export default function Register() {
+export default function Login() {
     const [form, setForm] = useState({
         username: "",
-        password: "",
-        confirmationPassword: "",
+        password: ""
     });
 
     const [message, setMessage] = useState(null);
@@ -19,13 +18,14 @@ export default function Register() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const res = await registerUser(form);
+        const res = await loginUser(form);
         if (res.ok) {
-            setMessage("Inscription validée");
+          //  const token = await res.json();
+           // localStorage.setItem("token", token);
+            setMessage("Connexion validée");
             setTimeout(() => {
-                navigate("/login");
+                navigate("/");
             }, 1500);
-            //setForm({ username: "", password: "", confirmationPassword: "" });
         } else {
             const err = await res.text();
             setMessage("Error: " + err);
