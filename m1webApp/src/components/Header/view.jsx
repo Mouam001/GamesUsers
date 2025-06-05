@@ -2,15 +2,16 @@ import {Link} from "react-router";
 import {Menu, X} from "lucide-react";
 import frFlag from "../../assets/france.png";
 import enFlag from "../../assets/royaume-uni.png";
+import i18n from "i18next";
 
 export default function NavbarView({ open, toggleMenu, changeLanguage, t }) {
-    const currentLang = navigator.language.startsWith("fr") || window.location.href.includes("/fr") || i18n.language.startsWith("fr");
+    const currentLang = navigator.language.startsWith("fr") || window.location.href.includes("/fr") || navigator.language.startsWith("en");
     const flag = currentLang ? frFlag : enFlag;
 
     return (
         <nav className="bg-gray-900 text-white shadow-md">
             <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-                <Link to="/" className="text-2xl font-bold">🎮 GameHub</Link>
+                <Link to="/" className="text-2xl font-bold">🎮 Game Users</Link>
 
                 {/* Desktop menu */}
                 <ul className="hidden md:flex space-x-6 items-center text-lg">

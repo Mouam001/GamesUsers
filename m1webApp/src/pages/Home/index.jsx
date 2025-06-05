@@ -12,8 +12,8 @@ export default function Home() {
 
             const gameEnriched = await Promise.all(
                 topGame.slice(0, 10).map(async (game) => {
-                    if (game.cover?.id) {
-                        const cover = await getGameCover(game.cover.id)
+                    if (game.id) {
+                        const cover = await getGameCover(game.id)
                         if (cover && cover.url) {
                             return {
                                      ...game, coverUrl :cover.url,

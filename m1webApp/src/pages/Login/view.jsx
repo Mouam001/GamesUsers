@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 export default function LoginView({form, onChange, onSubmit, message}){
     return (
         <div className="max-w-md mx-auto mt-10 p-6 border rounded bg-white shadow">
-            <h2 className="text-2xl font-bold mb-4 text-center">COnnexion</h2>
+            <h2 className="text-2xl font-bold mb-4 text-center">Connexion</h2>
 
             {message && <div className="mb-4 text-sm text-center text-red-600">{message}</div>}
 

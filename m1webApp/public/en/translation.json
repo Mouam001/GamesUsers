@@ -1,8 +1,12 @@
 {
   "change-language": "Change Language",
   "footer-title": "Footer",
+  "logger" : "Logger",
+  "register": "Register",
   "menu": {
     "login": "Login",
-    "home": "Home"
+    "home": "Home",
+    "contact": "Contact"
+
   }
 }

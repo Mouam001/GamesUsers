@@ -1,8 +1,11 @@
 {
   "change-language": "Change de langue",
   "footer-title": "Pied de page",
+  "logger" : "Se connecter",
+  "register": " S'enregistrer",
   "menu": {
     "login": "Connexion",
-    "home": "Accueil"
+    "home": "Accueil",
+    "contact": "Contact"
   }
 }
