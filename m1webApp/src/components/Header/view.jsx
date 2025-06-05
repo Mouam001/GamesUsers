@@ -1,0 +1,1 @@
+<li><Link to="/register">{t ? t("menu.register") : "Inscription"}</Link></li>
