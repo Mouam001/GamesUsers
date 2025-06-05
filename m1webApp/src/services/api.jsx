@@ -41,3 +41,16 @@ export async function getGameCover(id) {
 
         return res;
     }
+
+    export async function loginUser(form){
+        const res = await fetch("https://m1.dysnomia.studio/api/Users/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(form),
+        });
+
+        return res;
+
+    }
