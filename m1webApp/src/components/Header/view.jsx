@@ -2,9 +2,8 @@ import {Link} from "react-router";
 import {Menu, X} from "lucide-react";
 import frFlag from "../../assets/france.png";
 import enFlag from "../../assets/royaume-uni.png";
-import i18n from "i18next";
 
-export default function NavbarView({ open, toggleMenu, changeLanguage, t }) {
+export default function NavbarView({open, toggleMenu, changeLanguage,logout, isLogged, t}) {
     const currentLang = navigator.language.startsWith("fr") || window.location.href.includes("/fr") || navigator.language.startsWith("en");
     const flag = currentLang ? frFlag : enFlag;
 
@@ -16,9 +15,17 @@ export default function NavbarView({ open, toggleMenu, changeLanguage, t }) {
                 {/* Desktop menu */}
                 <ul className="hidden md:flex space-x-6 items-center text-lg">
                     <li><Link to="/" className="hover:text-blue-300">{t("menu.home")}</Link></li>
+                    {isLogged ? (
+                        <li>
+                            <button onClick={logout} className="hover:text-red-400">
+                                {t("menu.logout")}
+                            </button>
+                        </li>
+                        ) : (
                     <li><Link to="/login" className="hover:text-blue-300">{t("menu.login")}</Link></li>
+                        )}
                     <li className="flex items-center gap-2">
-                        <img src={flag} alt="langue" className="w-5 h-5" />
+                        <img src={flag} alt="langue" className="w-5 h-5"/>
                         <button onClick={changeLanguage} className="hover:text-blue-300">
                             {t("change-language")}
                         </button>
@@ -27,18 +34,32 @@ export default function NavbarView({ open, toggleMenu, changeLanguage, t }) {
 
                 {/* Burger menu */}
                 <button onClick={toggleMenu} className="md:hidden">
-                    {open ? <X size={28} /> : <Menu size={28} />}
+                    {open ? <X size={28}/> : <Menu size={28}/>}
                 </button>
             </div>
 
             {/* Mobile menu */}
             {open && (
                 <ul className="md:hidden px-4 pb-4 space-y-2 text-lg bg-gray-800">
-                    <li><Link to="/" onClick={toggleMenu} className="block hover:text-blue-300">{t("menu.home")}</Link></li>
-                    <li><Link to="/login" onClick={toggleMenu} className="block hover:text-blue-300">{t("menu.login")}</Link></li>
+                    <li><Link to="/" onClick={toggleMenu} className="block hover:text-blue-300">{t("menu.home")}</Link>
+                    </li>
+
+                    {isLogged ? (
+                        <li>
+                            <button onClick={() => {toggleMenu(); logout(); }} className="hover:text-red-400 w-full text-left">
+                                {t("menu.logout")}
+                            </button>
+                        </li>
+                        ): (
+                    <li><Link to="/login" onClick={toggleMenu}
+                              className="block hover:text-blue-300">{t("menu.login")}</Link></li>
+                        )}
                     <li className="flex items-center gap-2">
-                        <img src={flag} alt="langue" className="w-5 h-5" />
-                        <button onClick={() => { toggleMenu(); changeLanguage(); }} className="hover:text-blue-300">
+                        <img src={flag} alt="langue" className="w-5 h-5"/>
+                        <button onClick={() => {
+                            toggleMenu();
+                            changeLanguage();
+                        }} className="hover:text-blue-300">
                             {t("change-language")}
                         </button>
                     </li>

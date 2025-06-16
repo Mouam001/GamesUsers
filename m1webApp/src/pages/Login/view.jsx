@@ -14,7 +14,7 @@ export default function LoginView({form, onChange, onSubmit, message}){
                     className="w-full p-2 border rounded"
                     type="text"
                     name="username"
-                    placeholder="Nom d'utilisateur"
+                    placeholder={t("user")}
                     value={form.username}
                     onChange={onChange}
                     required
@@ -23,7 +23,7 @@ export default function LoginView({form, onChange, onSubmit, message}){
                     className="w-full p-2 border rounded"
                     type="password"
                     name="password"
-                    placeholder="Mot de passe"
+                    placeholder={t("pwd")}
                     value={form.password}
                     onChange={onChange}
                     required

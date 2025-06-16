@@ -53,3 +53,21 @@ export async function getGameCover(id) {
 
         return res;
     }
+
+    export async function renewToken(token){
+        try{
+           const res = await fetch("https://m1.dysnomia.studio/api/Users/renewToken", {
+               method: "POST",
+               headers: {
+                   Authorization: `Bearer ${token}`,
+               },
+           });
+
+           if(!res.ok) return null;
+           const newToken = await res.text();
+           return newToken;
+         } catch (err) {
+            console.error("Erreur lors du renouvellement du token : ", err);
+            return null;
+        }
+    }

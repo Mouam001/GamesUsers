@@ -4,12 +4,15 @@
   "logger" : "Logger",
   "register": "Register",
   "top_10_games": "Best of 10 games",
-  "login" : "Login",
   "no_account_yet": "No account yet",
+  "pwd" : "Password",
+  "pwd_confirmed" : "Password Confirmed",
+  "user" : "User Name",
   "menu": {
     "login": "Login",
     "home": "Home",
-    "contact": "Contact"
+    "contact": "Contact",
+    "logout" : "Logout"
 
   }
 }
