@@ -1,8 +1,17 @@
 {
   "change-language": "Change de langue",
   "footer-title": "Pied de page",
+  "logger" : "Se connecter",
+  "register": " S'enregistrer",
+  "top_10_games": " Les 10 Meilleurs jeux",
+  "no_account_yet": "Pas encore de compte",
+  "pwd" : "Mot de Passe",
+  "pwd_confirmed" : "Confirmation du mot de passe",
+  "user" : "Nom d'Utilisateur",
   "menu": {
     "login": "Connexion",
-    "home": "Accueil"
+    "home": "Accueil",
+    "contact": "Contact",
+    "logout" : "Déconnexion"
   }
 }
