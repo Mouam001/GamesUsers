@@ -1,3 +1,4 @@
+// SPEC 1
 export async function getTopGames() {
     const res = await fetch("https://m1.dysnomia.studio/api/Games/top");
     return await res.json();
@@ -30,6 +31,7 @@ export async function getGameCover(id) {
     }
 }
 
+// SPEC 2
     export async function registerUser(form) {
         const res = await fetch("https://m1.dysnomia.studio/api/Users/register", {
             method: "POST",
@@ -88,3 +90,36 @@ export async function getGameCover(id) {
             return null;
         }
     }
+
+    // SPEC 3
+export async function searchGames(query, token) {
+    const res = await fetch(`https://m1.dysnomia.studio/api/Games/search?term=${query}&pageSize=10&page=1`,{
+        headers: {
+            Authorization: `Bearer ${token}`,
+        },
+    });
+        if(!res.ok) throw new Error(" Erreur lors de la recherche");
+        return await res.json();
+}
+
+export async function getGamesDetail(id, token) {
+    const res = await fetch(`https://m1.dysnomia.studio/api/Games/${id}`,{
+        headers: {
+            Authorization: `Bearer ${token}`,
+        },
+    });
+    if(!res.ok) throw new Error(" Jeu non trouvé");
+    return await res.json();
+}
+
+
+export async function getScreenshots(id, token) {
+    const res = await fetch(`https://m1.dysnomia.studio/api/Games/screenshots/${id}`, {
+        headers: {
+            Authorization: `Bearer ${token}`,
+        },
+    });
+    if(!res.ok) return [];
+    const data = await res.json();
+    return Array.isArray(data) ? data : [];
+}
