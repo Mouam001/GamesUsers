@@ -8,7 +8,15 @@
   "pwd" : "Mot de Passe",
   "pwd_confirmed" : "Confirmation du mot de passe",
   "user" : "Nom d'Utilisateur",
-  "menu": {
+  "search_games": "Rechercher des jeux",
+  "search_placeholder": "Entrez le nom du jeu",
+  "search": "Rechercher",
+  "loading": "Chargement...",
+  "game_not_found": "Jeu non trouvé",
+  "no_description": "Aucune description disponible.",
+  "screenshots": "Captures d'écran",
+  "no_mage": "pas d'image",
+"menu": {
     "login": "Connexion",
     "home": "Accueil",
     "contact": "Contact",
