@@ -123,3 +123,30 @@ export async function getScreenshots(id, token) {
     const data = await res.json();
     return Array.isArray(data) ? data : [];
 }
+
+
+export async function addFavorite(gameId, token) {
+    const res = await fetch(`https://m1.dysnomia.studio/api/Users/favorites/add/${gameId}`, {
+        method: "POST",
+        headers: {
+            Authorization: `Bearer ${token}`,
+        },
+    });
+
+    if(!res.ok) throw new Error(" Erreur lors de l'ajout aux Favoris");
+    console.log(gameId);
+    return await res.text();
+}
+
+
+export async function removeFavorite(gameId, token) {
+    const res = await fetch(`https://m1.dysnomia.studio/api/Users/favorites/remove/${gameId}`, {
+        method: "DELETE",
+        headers: {
+            Authorization: `Bearer ${token}`,
+        },
+    });
+
+    if(!res.ok) throw new Error(" Erreur lors de la supression des Favoris");
+    return await res.text();
+}

@@ -16,7 +16,10 @@
   "no_description": "Aucune description disponible.",
   "screenshots": "Captures d'écran",
   "no_mage": "pas d'image",
-"menu": {
+  "add_favorite": "Ajouter aux favoris",
+  "remove_favorite": "Retirer des favoris",
+
+  "menu": {
     "login": "Connexion",
     "home": "Accueil",
     "contact": "Contact",

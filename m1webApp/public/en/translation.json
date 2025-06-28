@@ -16,6 +16,8 @@
   "no_description": "No description available.",
   "screenshots": "Screen Captures",
   "no_mage": "No picture",
+  "add_favorite": "Add to favorites",
+  "remove_favorite": "Remove from favorites",
   "menu": {
     "login": "Login",
     "home": "Home",
