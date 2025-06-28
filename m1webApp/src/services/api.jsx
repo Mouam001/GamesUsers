@@ -71,3 +71,20 @@ export async function getGameCover(id) {
             return null;
         }
     }
+
+    export async function fetchMe(token) {
+        try{
+            const res = await fetch("https://m1.dysnomia.studio/api/Users/me", {
+                method: "GET",
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
+            });
+
+            if(!res.ok) return null;
+            return await res.json();
+        } catch (err) {
+            console.error("Echec du chargement utilisateur ", err);
+            return null;
+        }
+    }
