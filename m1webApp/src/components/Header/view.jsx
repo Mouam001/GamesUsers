@@ -23,6 +23,11 @@ export default function NavbarView({open, toggleMenu, changeLanguage,logout, isL
                             <Link to={"/search"} className="hover:text-blue-300">{t("search")}</Link>
                         </li>
                         )}
+                    {isLogged && (
+                        <li>
+                            <Link to={"/profile"} className="hover:text-blue-300">{t("profile")}</Link>
+                        </li>
+                    )}
                     {isLogged ? (
                         <li>
                             <button onClick={logout} className="hover:text-red-400">
@@ -60,6 +65,12 @@ export default function NavbarView({open, toggleMenu, changeLanguage,logout, isL
                             <Link to="/search" onClick={toggleMenu} className="block hover:text-blue-300">{t("search")}</Link>
                         </li>
                         )}
+
+                    {isLogged && (
+                        <li>
+                            <Link to="/profile" onClick={toggleMenu} className="block hover:text-blue-300">{t("profile")}</Link>
+                        </li>
+                    )}
                     {isLogged ? (
                         <li>
                             <button onClick={() => {toggleMenu(); logout(); }} className="hover:text-red-400 w-full text-left">

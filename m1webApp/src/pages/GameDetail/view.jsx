@@ -17,7 +17,7 @@ export default function GameDetailView({game, screenshots, loading, isFavorite, 
                         isFavorite ? "bg-red-500 hover:bg-red-600" : "bg-blue-500 hover:bg-blue-600"
                     } text-white`}
                     >
-                    {isFavorite ? t("remove_favorite") : ("add_favorite")}
+                    {isFavorite ? t("remove_favorite") : t("add_favorite")}
                     </button>
             </div>
             <p className="mb-6">{game.summary || t("no_description")}</p>

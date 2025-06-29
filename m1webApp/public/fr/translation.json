@@ -1,5 +1,5 @@
 {
-  "change-language": "Change de langue",
+  "change-language": "Changer de langue",
   "footer-title": "Pied de page",
   "logger" : "Se connecter",
   "register": "S'enregistrer",
@@ -18,7 +18,12 @@
   "no_mage": "pas d'image",
   "add_favorite": "Ajouter aux favoris",
   "remove_favorite": "Retirer des favoris",
-
+  "profile": "Profile",
+  "username": "Nom d'utilisateur",
+  "favorites": "Favoris",
+  "no_favorites": "Aucun jeu dans vos favoris",
+  "delete_account": "Supprimer le compte",
+  "no_image": "Pas d'image disponible",
   "menu": {
     "login": "Connexion",
     "home": "Accueil",

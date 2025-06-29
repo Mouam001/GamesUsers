@@ -150,3 +150,28 @@ export async function removeFavorite(gameId, token) {
     if(!res.ok) throw new Error(" Erreur lors de la supression des Favoris");
     return await res.text();
 }
+
+// SPEC 4
+
+export async function getUserProfile(token){
+    const res = await fetch("https://m1.dysnomia.studio/api/Users/me", {
+        headers: {
+            Authorization: `Bearer ${token}`,
+        },
+    });
+
+    if(!res.ok) throw new Error(" Erreur lors de la recuperation de l'utilisateur");
+    return await res.json();
+}
+
+export async function deleteAccount(token){
+    const res = await fetch("https://m1.dysnomia.studio/api/Users", {
+        method: "DELETE",
+        headers: {
+            Authorization: `Bearer ${token}`,
+        },
+    });
+
+    if(!res.ok) throw new Error(" Erreur lors de la suppression du compte");
+    return await true;
+}

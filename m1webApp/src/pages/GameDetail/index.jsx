@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import View from "./view.jsx";
-import {getScreenshots, getGamesDetail, removeFavorite, addFavorite} from "../../services/api";
+import {getScreenshots, getGamesDetail, removeFavorite, addFavorite, fetchMe} from "../../services/api";
 import {useParams} from "react-router";
 import useToken from "../../hooks/useToken.js";
 
@@ -17,8 +17,15 @@ export default function GameDetail() {
             try{
                 const gameDetail = await getGamesDetail(id, token);
                 const screenshots = await getScreenshots(id, token);
+                const user = await fetchMe(token);
+
                 setGame(gameDetail);
                 setScreenshots(screenshots);
+
+                //je verifie si le jeu est dans les favoris
+                const _isFavoris = user.favorites.some(fav => fav.id === parseInt(id));
+                setIsFavorite(_isFavoris);
+
             }catch(error){
                 console.log(error);
             }
