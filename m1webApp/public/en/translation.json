@@ -16,6 +16,13 @@
   "no_description": "No description available.",
   "screenshots": "Screen Captures",
   "no_mage": "No picture",
+  "add_favorite": "Add to favorites",
+  "remove_favorite": "Remove from favorites",
+  "profile": "Profil",
+  "favorites": "Favorites",
+  "no_favorites": "No game in your favorites",
+  "delete_account": "Delete Account",
+  "no_image": "No image available",
   "menu": {
     "login": "Login",
     "home": "Home",
