@@ -5,10 +5,8 @@ import enFlag from "../../assets/royaume-uni.png";
 import {useTranslation} from "react-i18next";
 
 export default function NavbarView({open, toggleMenu, changeLanguage,logout, isLogged, t}) {
-    const currentLang = navigator.language.startsWith("fr") ||
-        window.location.href.includes("/fr") ||
-        navigator.language.startsWith("en");
-    const flag = currentLang ? frFlag : enFlag;
+    const {i18n } = useTranslation();
+    const flag = i18n.language.startsWith("fr") ? frFlag : enFlag;
 
     return (
         <nav className="bg-gray-900 text-white shadow-md">
