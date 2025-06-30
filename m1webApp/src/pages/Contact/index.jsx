@@ -26,7 +26,7 @@ export default function Contact(){
             'service_xp24u06', // Service ID coté EMailjs
             'template_6vccyme',// Template ID
             {
-                from_name : `${form.name.firstName} ${form.name.lastName}`,
+                from_name : `${form.firstName} ${form.lastName}`,
                 message : form.message,
                 email : form.email,
                 company: form.email,
