@@ -8,6 +8,7 @@ import Search from "./pages/Search/index.jsx";
 import Profile from "./pages/profile/index.jsx";
 import PrivateRoute from "./components/Auth/PrivateRoute.jsx";
 import GameList from "./pages/GameList/index.jsx";
+import Contact from "./pages/Contact/index.jsx";
 
 export default function App(){
     return (
@@ -16,6 +17,7 @@ export default function App(){
                 <Route path="/" element={<Home/>}/>
                 <Route path="/register" element={<Register/>}/>
                 <Route path="/login" element={<Login/>}/>
+                <Route path="/contact" element={<Contact/>}/>
 
                 <Route path="/games/:id" element={
                     <PrivateRoute>

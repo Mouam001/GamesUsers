@@ -1,4 +1,5 @@
 import { FaXTwitter, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
+import {Link} from "react-router";
 
 export default function FooterView() {
     return (
@@ -19,11 +20,14 @@ export default function FooterView() {
                         <span className="text-xl font-semibold">Mouammar Soulé</span>
                     </div>
                     <nav className="flex space-x-8 mt-4 md:mt-0 text-sm text-gray-300">
-                        <a href="#" className="hover:text-white">Kill Them Cold</a>
-                        <a href="#" className="hover:text-white">Contact</a>
-                        <a href="#" className="hover:text-white">Skills</a>
-                        <a href="#" className="hover:text-white">Blog</a>
-                        <a href="#" className="hover:text-white">Travail</a>
+                        <a href="https://gitlab.com/mouammar8080ni/kill_them_cold" className="hover:text-white">Kill Them Cold</a>
+                        (
+                        <li>
+                            <Link to="/contact" className="hover:text-blue-300">Contact</Link>
+                        </li>
+                        <a href="https://fr.wikipedia.org/wiki/Comores_(pays)" className="hover:text-white">Skills</a>
+                        <a href="https://www.facebook.com/noma.papao" className="hover:text-white">Blog</a>
+                        <a href="https://www.groupe-idea.com/fr" className="hover:text-white">Travail</a>
                     </nav>
                 </div>
 
@@ -31,22 +35,22 @@ export default function FooterView() {
                 <div className="flex space-x-4 items-center">
                     <div className="bg-[#5B5BFF] p-2 rounded-full text-white">
                         <a href="https://x.com/Mouammar8080" target="_blank" rel="noopener noreferrer">
-                        <FaXTwitter />
+                            <FaXTwitter />
                         </a>
                     </div>
                     <div className="bg-[#1F2633] p-2 rounded-full text-white hover:bg-[#2b3549]">
                         <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                        <FaInstagram />
+                            <FaInstagram />
                         </a>
                     </div>
                     <div className="bg-[#1F2633] p-2 rounded-full text-white hover:bg-[#2b3549]">
                         <a href="https://www.linkedin.com/in/mouammar-soule-134b5423a/" target="_blank" rel="noopener noreferrer">
-                        <FaLinkedinIn />
+                            <FaLinkedinIn />
                         </a>
                     </div>
                     <div className="bg-[#1F2633] p-2 rounded-full text-white hover:bg-[#2b3549]">
                         <a href="https://www.youtube.com/@toutcreatiftechnologique3268" target="_blank" rel="noopener noreferrer">
-                        <FaYoutube />
+                            <FaYoutube />
                         </a>
                     </div>
                 </div>

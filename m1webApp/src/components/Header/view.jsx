@@ -23,7 +23,7 @@ export default function NavbarView({open, toggleMenu, changeLanguage,logout, isL
                     )}
                     {isLogged && (
                         <li>
-                            <Link to={"/games"} className="hover:text-blue-300">Voir plus de jeux</Link>
+                            <Link to={"/games"} className="hover:text-blue-300">{t("see_games")}</Link>
                         </li>
                     )}
                     {isLogged && (
@@ -71,7 +71,7 @@ export default function NavbarView({open, toggleMenu, changeLanguage,logout, isL
 
                     {isLogged && (
                         <li>
-                            <Link to="/games" onClick={toggleMenu} className="block hover:text-blue-300">Voir plus de jeux</Link>
+                            <Link to="/games" onClick={toggleMenu} className="block hover:text-blue-300">{t("see_games")}</Link>
                         </li>
                     )}
 
