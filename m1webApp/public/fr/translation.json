@@ -24,8 +24,9 @@
   "no_favorites": "Aucun jeu dans vos favoris",
   "delete_account": "Supprimer le compte",
   "no_image": "Pas d'image disponible",
-  "company_list_title": "Entreprises impliquées",
   "see_games": "Voir plus de jeux",
+  "start_date" : "Créer le",
+  "company_list_title": "Entreprise(s) affecté à ce jeu",
   "menu": {
     "login": "Connexion",
     "home": "Accueil",

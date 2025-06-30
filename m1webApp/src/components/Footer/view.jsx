@@ -58,7 +58,7 @@ export default function FooterView() {
 
             {/* Bas de page */}
             <div className="border-t border-gray-700 mt-8 pt-4 text-center text-sm text-gray-400">
-                ©pagedone 2023, All rights reserved.
+                ©On Mange 2025, All rights reserved.
             </div>
         </footer>
     );

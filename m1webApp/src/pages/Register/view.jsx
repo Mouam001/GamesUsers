@@ -6,7 +6,7 @@ export default function RegisterView({form, onChange, onSubmit, message}){
         <div className="max-w-md mx-auto mt-10 p-6 border rounded bg-white shadow">
             <h2 className="text-2xl font-bold mb-4 text-center">{t("menu.login")}</h2>
 
-            {message && <div className="mb-4 text-sm text-center text-red-600">{message}</div>}
+            {message && <div className="mb-4 text-sm text-center text-blue-600">{message}</div>}
 
             <form onSubmit={onSubmit} className="space-y-4">
                 <input

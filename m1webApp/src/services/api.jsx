@@ -1,4 +1,4 @@
-// SPEC 1
+// SPEC 1 and SPEC 6
 export async function getTopGames(page = 1, pageSize = 25) {
     const res = await fetch(`https://m1.dysnomia.studio/api/Games/top?pageSize=${pageSize}&page=${page}`);
     if(!res.ok) throw new Error(" Erreur API");
@@ -174,4 +174,16 @@ export async function deleteAccount(token){
 
     if(!res.ok) throw new Error(" Erreur lors de la suppression du compte");
     return await true;
+}
+
+//SPEC 7
+export async function getCompagnieById(id, token){
+    const res = await fetch(`https://m1.dysnomia.studio/api/Companies/${id}`, {
+        headers: {
+            Authorization: `Bearer ${token}`,
+        },
+    });
+
+    if(!res.ok) throw new Error(`Erreur lors de la recuperation de l'entreprise avec l'id :", ${id}`);
+    return await res.json();
 }
