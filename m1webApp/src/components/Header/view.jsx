@@ -5,10 +5,8 @@ import enFlag from "../../assets/royaume-uni.png";
 import {useTranslation} from "react-i18next";
 
 export default function NavbarView({open, toggleMenu, changeLanguage,logout, isLogged, t}) {
-    const currentLang = navigator.language.startsWith("fr") ||
-        window.location.href.includes("/fr") ||
-        navigator.language.startsWith("en");
-    const flag = currentLang ? frFlag : enFlag;
+    const {i18n } = useTranslation();
+    const flag = i18n.language.startsWith("fr") ? frFlag : enFlag;
 
     return (
         <nav className="bg-gray-900 text-white shadow-md">
@@ -22,7 +20,12 @@ export default function NavbarView({open, toggleMenu, changeLanguage,logout, isL
                         <li>
                             <Link to={"/search"} className="hover:text-blue-300">{t("search")}</Link>
                         </li>
-                        )}
+                    )}
+                    {isLogged && (
+                        <li>
+                            <Link to={"/games"} className="hover:text-blue-300">Voir plus de jeux</Link>
+                        </li>
+                    )}
                     {isLogged && (
                         <li>
                             <Link to={"/profile"} className="hover:text-blue-300">{t("profile")}</Link>
@@ -34,10 +37,10 @@ export default function NavbarView({open, toggleMenu, changeLanguage,logout, isL
                                 {t("menu.logout")}
                             </button>
                         </li>
-                        ) : (
-                    <li>
-                        <Link to="/login" className="hover:text-blue-300">{t("menu.login")}</Link>
-                    </li>
+                    ) : (
+                        <li>
+                            <Link to="/login" className="hover:text-blue-300">{t("menu.login")}</Link>
+                        </li>
                     )}
 
                     <li className="flex items-center gap-2">
@@ -64,7 +67,13 @@ export default function NavbarView({open, toggleMenu, changeLanguage,logout, isL
                         <li>
                             <Link to="/search" onClick={toggleMenu} className="block hover:text-blue-300">{t("search")}</Link>
                         </li>
-                        )}
+                    )}
+
+                    {isLogged && (
+                        <li>
+                            <Link to="/games" onClick={toggleMenu} className="block hover:text-blue-300">Voir plus de jeux</Link>
+                        </li>
+                    )}
 
                     {isLogged && (
                         <li>
@@ -77,11 +86,11 @@ export default function NavbarView({open, toggleMenu, changeLanguage,logout, isL
                                 {t("menu.logout")}
                             </button>
                         </li>
-                        ): (
-                    <li>
-                        <Link to="/login" onClick={toggleMenu}
-                              className="block hover:text-blue-300">{t("menu.login")}</Link>
-                    </li>
+                    ): (
+                        <li>
+                            <Link to="/login" onClick={toggleMenu}
+                                  className="block hover:text-blue-300">{t("menu.login")}</Link>
+                        </li>
                     )}
                     <li className="flex items-center gap-2">
                         <img src={flag} alt="langue" className="w-5 h-5"/>
