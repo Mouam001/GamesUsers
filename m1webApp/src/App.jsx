@@ -9,6 +9,7 @@ import Profile from "./pages/profile/index.jsx";
 import PrivateRoute from "./components/Auth/PrivateRoute.jsx";
 import GameList from "./pages/GameList/index.jsx";
 import Contact from "./pages/Contact/index.jsx";
+import NotFound from "./pages/NotFound/index.jsx";
 
 export default function App(){
     return (
@@ -41,6 +42,9 @@ export default function App(){
                         <GameList/>
                     </PrivateRoute>
                 }/>
+
+                {/* Gestion coté client 404*/}
+                <Route path="*" element={<NotFound/>}/>
 
             </Route>
         </Routes>

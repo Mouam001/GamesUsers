@@ -19,6 +19,7 @@ export default function GameDetail() {
     const [isFavorite, setIsFavorite] = useState(false);
     const [companies, setCompanies] = useState([]);
     const token = useToken();
+    const [error, setError] = useState(null);
 
     useEffect(() => {
         async function fetchData() {
@@ -43,6 +44,7 @@ export default function GameDetail() {
                             return company;
                         } catch (e) {
                             console.error(`Erreur chargement compagnie ${companyId}`, e);
+                            setError("notfound.message");
                             return null;
                         }
                     })

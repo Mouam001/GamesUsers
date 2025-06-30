@@ -5,7 +5,7 @@ export default function GameDetailView({game, screenshots, loading, isFavorite, 
     const {t} = useTranslation();
 
     if(loading) return <p className="text-center mt-10">{t("loading")}</p>;
-    if(!game) return <p className="text-center mt-10">{t("game_not_found")}</p>;
+    if(!game) return <p className="text-center mt-10 font-bold text-red-600">{t("game_not_found")}</p>;
 
     return (
         <div className="max-w-4xl mx-auto p-4">
@@ -34,7 +34,6 @@ export default function GameDetailView({game, screenshots, loading, isFavorite, 
                     />
                 ))}
             </div>
-            <span></span>
             {/* Bloc Entreprises */}
             {companies.length > 0 && (
                 <div className="mb-6">
