@@ -33,6 +33,7 @@ i18n.use(initReactI18next).init({
                 "no_favorites": "Aucun jeu dans vos favoris",
                 "delete_account": "Supprimer le compte",
                 "no_image": "Pas d'image disponible",
+                "company_list_title": "Entreprises impliquées",
                 "menu": {
                     "login": "Connexion",
                     "home": "Accueil",

@@ -1,9 +1,9 @@
 // SPEC 1
-export async function getTopGames() {
-    const res = await fetch("https://m1.dysnomia.studio/api/Games/top");
+export async function getTopGames(page = 1, pageSize = 25) {
+    const res = await fetch(`https://m1.dysnomia.studio/api/Games/top?pageSize=${pageSize}&page=${page}`);
+    if(!res.ok) throw new Error(" Erreur API");
     return await res.json();
 }
-
 
 export async function getGameCover(id) {
     try {
