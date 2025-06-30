@@ -1,4 +1,4 @@
-# 🎮 Game Users - Projet Front M1 2025
+# 🎮 Game Users - M1 2025
 
 ## 🚀 Description
 Ce projet est une application web développée en **React + Vite** qui permet aux utilisateurs de :
@@ -114,7 +114,7 @@ npm install @emailjs/browser
 
 * ✅ Page 404 personnalisée
 * ❌ Mise en cache avancée des images localement (possible à faire avec localStorage ou indexedDB)
-* ✅ Linter avec peu ou pas de warnings
+* ❌ Linter avec peu ou pas de warnings
 
 ## 👤 Auteur
 # Mouammar Soulé(Projet M1 Info 2025)
