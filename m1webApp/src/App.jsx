@@ -9,7 +9,6 @@ import Profile from "./pages/profile/index.jsx";
 import PrivateRoute from "./components/Auth/PrivateRoute.jsx";
 import GameList from "./pages/GameList/index.jsx";
 import Contact from "./pages/Contact/index.jsx";
-import CompagnieDetail from "./pages/Compagnie/index.jsx";
 
 export default function App(){
     return (
