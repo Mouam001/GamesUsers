@@ -32,5 +32,12 @@
     "home": "Accueil",
     "contact": "Contact",
     "logout" : "Déconnexion"
+  },
+
+  "notfound": {
+    "title": "Page non trouvée",
+    "message": "Désolé, la page que vous recherchez n'existe pas ou a été déplacée.",
+    "back_home": "Retourner à l'accueil"
   }
+
 }
